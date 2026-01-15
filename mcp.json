@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "amazon": {
+      "command": "python",
+      "args": [
+        "-m",
+        "simple_amazon_mcp.server"
+      ],
+      "env": {
+        "PYTHONPATH": "src"
+      }
+    }
+  }
+}

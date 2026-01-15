@@ -1,0 +1,22 @@
+[project]
+name = "simple-amazon-mcp"
+version = "0.1.0"
+description = "Amazon Products Scraper MCP Server"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx",
+    "mcp[cli,server]",
+    "beautifulsoup4",
+    "ollama>=0.6.1",
+]
+
+[project.scripts]
+simple-amazon-mcp = "simple_amazon_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/simple_amazon_mcp"]
